@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        /* Estilos personalizados */
+        body {
+            transition: background-color 0.5s ease;
+            color: #333; /* Color del texto en modo claro */
+        }
+        .modo-oscuro {
+            background-color: #333;
+            color: #fff; /* Color del texto en modo oscuro */
+        }
+        .navbar-brand {
+            color: #333; /* Color de la letra del botón Cambiar Modo */
+        }
+        /* Cambiar color de texto en modo oscuro */
+        .modo-oscuro h1,
+        .modo-oscuro th,
+        .modo-oscuro td {
+            color: #fff;
+        }
+        /* Redimensionar imagen */
+        .imagen-recortada {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Inicio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!-- Botones Cambiar Modo -->
+            <li class="nav-item">
+                <button id="cambiar-modo-claro" class="btn btn-outline-dark mr-2">Modo Claro</button>
+            </li>
+            <li class="nav-item">
+                <button id="cambiar-modo-oscuro" class="btn btn-outline-dark">Modo Oscuro</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-3">
+    <h1>Información sobre razas</h1>
+    <!-- Imagen recortada -->
+    <img src="https://www.woofairlines.com/wp-content/uploads/2022/11/trasporte-mascotas-madrid-londres-2.jpg" alt="Placeholder Image" class="img-fluid rounded imagen-recortada">
+
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Raza</th>
+                <th>Peso</th>
+                <th>Altura</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Labrador Retriever:</td>
+                <td>Entre 25 y 36 kg.</td>
+                <td>Entre 55 y 62 cm.</td> 
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Golden Retriever:</td>
+                <td>Entre 25 y 34 kg.</td>
+                <td>Entre 51 y 61 cm.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Bulldog Inglés:</td>
+                <td>Entre 23 y 25 kg.</td>
+                <td>Entre 31 y 40 cm.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Bootstrap JS y Script Personalizado -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Función para cambiar entre Modo Claro y Modo Oscuro
+        $('#cambiar-modo-claro').click(function() {
+            $('body').removeClass('modo-oscuro');
+        });
+
+        $('#cambiar-modo-oscuro').click(function() {
+            $('body').addClass('modo-oscuro');
+        });
+    });
+</script>
+
+</body>
+</html>
